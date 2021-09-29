@@ -1,0 +1,203 @@
+:root {
+  --mainColor: #8bb098;
+  --secondColor: #666666;
+}
+
+body {
+  background-image: url("../Photo/background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 50rem;
+  background-color: #2d3750;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: sans-serif;
+  caret-color: var(--mainColor);
+}
+
+.quote {
+  color: #fff6ef;
+  font-size: 122px;
+  font-weight: bold;
+  margin: 50px 0px 0px 0px;
+  text-shadow: 0 0 20px #2d3750;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  position: relative;
+  width: 265px;
+}
+
+.avatar-img {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.inpt {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin: 10px 0 10px 20px;
+  color: var(--mainColor);
+}
+
+.inpt:focus + img.icon {
+  filter: none;
+}
+
+.inpt:not(:placeholder-shown) + img.icon {
+  filter: none;
+}
+
+.usernameBox,
+.userpasswordBox {
+  border-bottom: 2px solid #666666;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.icon {
+  color: var(--mainColor);
+  width: 25px;
+  height: 25px;
+  filter: grayscale(100%);
+}
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  width: 160px;
+}
+
+.forgotPass,
+.creatAccount {
+  color: var(--secondColor);
+  font-size: 13px;
+  margin: 10px;
+}
+
+.loginButton {
+  background-color: var(--mainColor);
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 10px;
+  color: var(--secondColor);
+  font-weight: bold;
+}
+
+.loginButton:hover {
+  background-color: #71967e;
+}
+
+.loginButton:active {
+  transform: scale(0.98);
+}
+
+@media (min-width: 529px) and (max-width: 1000px) {
+  body {
+    flex-direction: row;
+    justify-content: unset;
+    position: relative;
+  }
+  .quote {
+    margin: 130px 0 0 20px;
+    font-size: 50px;
+  }
+
+  .loginForm {
+    width: 230px;
+    align-items: center;
+    background-color: #2d3750f8;
+    position: absolute;
+    left: 40%;
+    padding: 30px;
+    border-radius: 25px;
+    z-index: -1;
+    box-shadow: inset 0px 0px 15px 0px var(--secondColor);
+  }
+  .avatar-img {
+    width: 200px;
+  }
+  .creatAccount {
+    transform: none;
+  }
+  .logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 528px) {
+  body {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .quote {
+    display: none;
+  }
+
+  .loginForm {
+    width: 230px;
+    position: relative;
+    align-items: center;
+    background-color: #2d3750f8;
+    padding: 60px 30px 30px 30px;
+    border-radius: 25px;
+    z-index: -1;
+    box-shadow: inset 0px 0px 15px 0px var(--secondColor);
+  }
+
+  .loginForm::after {
+    content: "Today a reader";
+    color: #fff6ef;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: 0 0 20px #2d3750;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 80px;
+  }
+  .loginForm::before {
+    content: "Tomorrow a leader";
+    color: #fff6ef;
+    font-size: 23px;
+    font-weight: bold;
+    text-shadow: 0 0 20px #2d3750;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 110px;
+    text-align: right;
+  }
+
+  .avatar-img {
+    width: 200px;
+    margin-bottom: 0;
+  }
+  .creatAccount {
+    transform: none;
+  }
+  .logo {
+    left: 0;
+    width: 100px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/master.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="quote">Today <br />a reader<br />Tomorrow<br />a leader</h1>
+    <img src="Photo/logoWithoutShadow_white.png" alt="Logo" class="logo">
+    <form method="POST" class="loginForm">
+      <img src="Photo/avatar.png" alt="avatar" class="avatar-img" />
+
+      <div class="usernameBox">
+        
+        <input
+          type="text"
+          class="userName-input inpt"
+          name="userName"
+          id="userName"
+          placeholder="Username/Email"
+          minlength="5"
+          maxlength="40"
+          required
+        />
+        <img src="Photo/user.png" alt="userIcon" class="user icon">
+      </div>
+      <br />
+      <div class="userpasswordBox">
+        
+        <input
+          type="password"
+          class="userpassword-input inpt"
+          name="userpassword"
+          id="userpassword"
+          placeholder="Password"
+          required
+        />
+        <img src="Photo/pass.png" alt="passwordIcon" class="pass icon">
+        <!-- <i class="fas fa-eye icon"></i>
+        <i class="fas fa-eye-slash icon" style="display: none"></i> -->
+      </div>
+      <a href="#" class="forgotPass">Forgot password?</a>
+      <input type="submit" class="loginButton" value="Login"/>
+      <a href="#" class="creatAccount">Don't have an account? Create one.</a>
+    </form>
+  </body>
+</html>
